@@ -1,0 +1,23 @@
+<section>
+    <div><button id="back">back</button></div>
+    <h1>{{name}}</h1>
+    <div>
+        <img style="width: 100px" src="{{image_url}}" alt="pic of {{name}} beer">
+    </div>
+    <span>
+        <p>Предлага се в бутилки/кегове от {{volume.value}} {{volume.unit}}</p>
+        <h4>Консумира се най-добре с: </h4>
+        <ol>
+            {{#each food_pairing}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ol>
+        <h4>Това са нейните съставки:</h4>
+        <ul>
+            {{#each ingredients.malt}}
+            <li>{{this.name}} {{this.amount.value}} {{this.amount.unit}}</li>
+            {{/each}}
+        </ul>
+    </span>
+
+</section>
